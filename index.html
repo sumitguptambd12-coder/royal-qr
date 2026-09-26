@@ -7,6 +7,7 @@
 
 <style>
 *{box-sizing:border-box}
+
 body{
   margin:0;
   min-height:100vh;
@@ -17,6 +18,7 @@ body{
   background:radial-gradient(circle at center,#3a2500,#090909 65%);
   color:white;
 }
+
 .card{
   width:92%;
   max-width:430px;
@@ -27,21 +29,25 @@ body{
   background:linear-gradient(145deg,#111,#211700);
   box-shadow:0 0 35px #d4af37;
 }
+
 .crown{font-size:55px}
+
 h1{
   margin:10px 0;
   font-size:38px;
   color:#ffd700;
   text-shadow:0 0 15px #ff9d00;
 }
+
 .subtitle{
   color:#f5d77a;
   margin-bottom:25px;
 }
+
 .pay{
   display:inline-block;
   padding:15px 30px;
-  margin:10px 0 25px;
+  margin:10px 0 20px;
   border-radius:50px;
   background:linear-gradient(90deg,#ffd700,#ff9d00);
   color:#111;
@@ -50,19 +56,36 @@ h1{
   text-decoration:none;
   box-shadow:0 0 20px #ffb300;
 }
-.pay:hover{transform:scale(1.04)}
+
+.verify{
+  display:block;
+  margin-top:10px;
+  padding:13px;
+  border:1px solid #d4af37;
+  border-radius:12px;
+  color:#ffd700;
+  text-decoration:none;
+  font-weight:bold;
+}
+
 .info{
   font-size:14px;
   color:#ddd;
   line-height:1.6;
+  margin-top:20px;
 }
-.spark{font-size:22px}
+
+.spark{
+  font-size:22px;
+  margin-top:20px;
+}
 </style>
 </head>
 
 <body>
 
 <div class="card">
+
   <div class="crown">👑</div>
 
   <h1 id="title">ROYAL QR</h1>
@@ -75,13 +98,19 @@ h1{
     ₹10 PAY NOW
   </a>
 
+  <a class="verify"
+     href="https://wa.me/?text=Namaste%2C%20maine%20Royal%20QR%20ke%20liye%20%E2%82%B910%20payment%20kiya%20hai.%20Mera%20Transaction%20ID%20aur%20payment%20screenshot%20yeh%20hai.">
+    ✅ PAYMENT KE BAAD VERIFY
+  </a>
+
   <div class="info">
-    ₹10 payment ke baad apna Royal QR experience dekhein 🔥
+    ₹10 payment ke baad apna Transaction ID aur payment screenshot WhatsApp par bhejein.
   </div>
 
   <div class="spark">
     ✨ 👑 ✨
   </div>
+
 </div>
 
 <script>
@@ -96,7 +125,7 @@ const names = {
   jatav: "JATAV"
 };
 
-if (names[caste]) {
+if(names[caste]){
   document.getElementById("title").textContent = names[caste];
 }
 </script>
