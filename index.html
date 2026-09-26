@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Royal Identity</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
+font-family:Georgia,serif;background:radial-gradient(circle at 50% 35%,#6d4200,#160900 55%,#030303);color:#ffd76a;overflow:hidden}
+.card{text-align:center;padding:48px 25px;width:min(92%,620px);border:2px solid #d8a83e;border-radius:28px;
+box-shadow:0 0 25px #d89d25, inset 0 0 35px #4d2900;background:linear-gradient(145deg,#160b00dd,#030303ee)}
+.crown{font-size:58px;animation:pulse 1.4s infinite}.title{font-size:clamp(45px,12vw,92px);font-weight:900;letter-spacing:4px;text-shadow:0 0 12px #ffb300,0 0 35px #ff6500}
+.sub{font-family:Arial,sans-serif;font-size:18px;color:#ffe9ad;letter-spacing:2px;margin-top:12px}.line{margin:24px auto;width:75%;height:2px;background:linear-gradient(90deg,transparent,#ffd45b,transparent)}
+@keyframes pulse{50%{transform:scale(1.12);filter:drop-shadow(0 0 18px #ffb000)}} .spark{position:fixed;font-size:24px;animation:fall 3s linear infinite;opacity:.8}
+@keyframes fall{from{transform:translateY(-10vh) rotate(0)}to{transform:translateY(110vh) rotate(360deg)}}
+</style>
+</head>
+<body>
+<div class="card"><div class="crown">👑</div><div class="title" id="name">ROYAL</div>
+<div class="line"></div><div class="sub">सम्मान • पहचान • एकता</div></div>
+<script>
+const names={saini:"SAINI",kashyap:"KASHYAP",thakur:"THAKUR",bhimrao:"BHIM RAO",jatav:"JATAV"};
+const key=new URLSearchParams(location.search).get("caste")?.toLowerCase()||"saini";
+document.getElementById("name").textContent=names[key]||"ROYAL";
+for(let i=0;i<18;i++){let s=document.createElement("div");s.className="spark";s.textContent="✦";s.style.left=Math.random()*100+"vw";s.style.animationDelay=Math.random()*3+"s";document.body.appendChild(s)}
+</script>
+</body></html>
